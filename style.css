@@ -15,7 +15,7 @@ body{
 
 #viewer-container{
     width:80vw;
-    height:90vh;
+    height:100vh;
 
     background:fff;
 
@@ -31,8 +31,8 @@ body{
 1.viewer-ui{
 
     position:absolute;
-    bottom:10px;
-    left:50%;
+    bottom:20px;
+    left:100%;
     transform:translateX(-50%);
 
 }
@@ -67,7 +67,7 @@ canvas{
 
     font-size:20px;
     padding:4px 8px;
-    margin:0px;
+    margin:5px;
 
     border:none;
     border-radius:6px;
