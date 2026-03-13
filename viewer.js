@@ -146,9 +146,9 @@ window.addEventListener("mousemove", e => {
     }
 
     // vertical rotation
-    else if(Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 15){
+    else if(Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 30){
 
-        if(dy > 0)
+        if(dy < 0)
             currentRow = Math.min(currentRow + 1, rowNames.length - 1);
         else
             currentRow = Math.max(currentRow - 1, 0);
@@ -161,28 +161,29 @@ window.addEventListener("mousemove", e => {
 });
 
 
-// Zoom in / out
-function zoomIn(){
+// Zoom in / out------------------------------
 
-    zoom += 0.1;
+// function zoomIn(){
 
-    if(zoom > 3)
-        zoom = 3;
+    // zoom += 0.1;
 
-    draw();
+    // if(zoom > 3)
+        // zoom = 3;
 
-}
+    // draw();
 
-function zoomOut(){
+// }
 
-    zoom -= 0.1;
+// function zoomOut(){
 
-    if(zoom < 0.5)
-        zoom = 0.5;
+    // zoom -= 0.1;
 
-    draw();
+    // if(zoom < 0.5)
+        // zoom = 0.5;
 
-}
+    // draw();
+
+// }
 
 // auto rotate
 function toggleAutoRotate(){
