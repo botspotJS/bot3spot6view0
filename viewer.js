@@ -4,7 +4,6 @@ const ctx = canvas.getContext("2d");
 const rows = {};
 const rowNames = [];
 
-// We shouldmake it dynamic
 const rowCount = 4;	  // Rows
 const frames = 72;   // Images/ Row
 
@@ -55,7 +54,7 @@ function loadImages(){
             const num = String(i).padStart(3,"0");
 
             const img = new Image();
-            img.src = `cache/${ring}_${num}.webp`;     //<- change file import format
+            img.src = `cache/${ring}_${num}.png`;
 
             rows[ring].push(img);
 
@@ -132,11 +131,11 @@ window.addEventListener("mousemove", e => {
     const dy = e.clientY - startY;
 
     // horizontal rotation
-    if(Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 5){
+    if(Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 8){
 
         const row = rows[rowNames[currentRow]];
 
-        if(dx < 2)
+        if(dx < 0)
             currentFrame = (currentFrame - 1 + row.length) % row.length;
         else
             currentFrame = (currentFrame + 1) % row.length;
