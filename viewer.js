@@ -54,7 +54,7 @@ function loadImages(){
             const num = String(i).padStart(3,"0");
 
             const img = new Image();
-            img.src = `cache/${ring}_${num}.png`;
+            img.src = `cache/${ring}_${num}.webp`;
 
             rows[ring].push(img);
 
